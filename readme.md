@@ -1,63 +1,67 @@
-Diabetescostarica – Monorepo
+# Diabetescostarica Monorepo
 
-This monorepo contains both the WordPress headless backend and the Next.js frontend for the Diabetescostarica project.
-diabetescostarica/
-  backend-wordpress/   → Headless WordPress setup (PHP, theme, plugins)
-  frontend-next/       → Next.js application (React)
-  readme.md
+Headless WordPress backend + Next.js frontend in a single repo.
 
-🚀 Project Overview
+## Stack
+- WordPress (PHP 8+, MySQL/MariaDB) with a minimal headless theme (`backend-wordpress/wp-content/themes/headless-wp-master`)
+- Next.js 16 + React 19 + Tailwind 4 (Node.js 18+) in `frontend-next`
 
-This project uses WordPress as a headless CMS, exposing content via the REST API (and optionally WPGraphQL), while all rendering and UI are handled by a modern Next.js frontend.
+## Repository Layout
+- `backend-wordpress/` – full WordPress install; activate the “Minimal Theme” for headless output. Keep custom plugins/ACF here.
+- `frontend-next/` – Next.js app consuming the WP REST API; contains UI, templates, and utility code.
+- `readme.md` – project notes (this file).
 
-WordPress manages content, ACF fields, users, SEO metadata, etc.
+## Prerequisites
+- PHP 8+, MySQL/MariaDB, Apache/Nginx (XAMPP/LocalWP/DevKinsta are fine)
+- Node.js 18+ with npm (or pnpm/yarn/bun if you prefer)
 
-Next.js consumes the API and renders the public-facing website.
+## Local Setup
 
-📂 Repository Structure
-backend-wordpress/
+### Backend (WordPress)
+1) Create a database (e.g., `diabetescostarica`) and user with full privileges.  
+2) Copy `backend-wordpress` into your web root (e.g., `/Applications/XAMPP/xamppfiles/htdocs/diabetescostarica`).  
+3) Configure `backend-wordpress/wp-config.php` (DB name/user/pass, salts, site URL).  
+4) Visit the site domain to finish install/login.  
+5) In WP Admin: Appearance → Themes → activate “Minimal Theme” (from `headless-wp-master`).  
+6) Settings → Permalinks → set to “Post name”.  
+7) Install/enable any needed plugins (ACF, WPGraphQL, CORS headers, etc.) and expose content through REST (or GraphQL if you add it).
 
-Contains the WordPress backend environment:
+API base (for reference): `http(s)://<your-wp-host>/wp-json/`
 
-Custom headless theme
+### Frontend (Next.js)
+```bash
+cd frontend-next
+npm install
+```
 
-ACF configuration (if used)
+Create `.env.local` (recommended) to avoid hardcoded URLs:
+```bash
+NEXT_PUBLIC_WORDPRESS_API_URL=http://localhost/diabetescostarica/backend-wordpress/wp-json
+```
 
-Custom endpoints or functions
+Run the dev server:
+```bash
+npm run dev
+```
+Open `http://localhost:3000`. Edit `app/page.tsx` or the components in `src/` and the page auto-updates.
 
-REST API / WPGraphQL support
+Build/serve production:
+```bash
+npm run build
+npm start
+```
 
-All PHP logic
+## Development Notes
+- The frontend is currently the default Next.js template plus legacy components in `src/`; wire those up to WP data as needed.
+- Tailwind 4 is available via the new `@tailwindcss/postcss` pipeline.
+- Add tests/linters via `npm run lint` (ESLint config is included).
 
-This folder should be placed inside a local WordPress installation under:wp-content/themes/your-theme-name
+## Deployment
+- Host WordPress on any PHP/MySQL stack; ensure REST/API endpoints are publicly reachable.
+- Deploy the Next.js build to your Node host or static host (if you adapt it), pointing it at the live WordPress API.
+- Set the production API URL via environment variables on your hosting platform.
 
-frontend-next/
-
-Contains the Next.js frontend application:
-
-app/ router
-
-Components, templates, utilities
-
-API hooks and WordPress fetch logic
-
-Configuration and environment variables
-
-Runs on Node.js and consumes WordPress as an external API.
-
-🧱 Requirements
-Backend (WordPress)
-
-PHP 8+
-
-MySQL / MariaDB
-
-Apache/Nginx (XAMPP, DevKinsta, LocalWP, etc.)
-
-Frontend (Next.js)
-
-Node.js 18+
-
-npm / pnpm
-
-/your-local-wp/wp-content/themes/diabetescostarica-headless
+## Troubleshooting
+- If REST requests fail, confirm CORS headers on WordPress and permalinks are enabled.
+- Mismatched content: check `NEXT_PUBLIC_WORDPRESS_API_URL` and WordPress `Settings → General` (Site URL/Home URL).
+- Clear caches (plugins/CDN) if API changes don’t show up in the frontend.
