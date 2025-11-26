@@ -1,0 +1,311 @@
+:root {
+  --principalColor: #E70F0F;
+  --principalColorHigh: #c25850;
+  --secondColor: black;
+  --gray: #767676;
+  --menuBackground:  white;
+  --menuFontColor:  black;
+  --fontSizeBigX: 1.2rem;
+  --fontSizeBig: 1rem;
+  --menuFontSize:  0.8rem;
+  --fontSizeRegular: 0.8rem;
+  --fontSizeSmallX: 0.6rem;
+  --fontSizeSmallX: 0.4rem;
+}
+
+.casinoTable a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px;
+  padding: 10px;
+  border-bottom: 1px solid #80808045;
+}
+
+.casinoTable a:hover {
+  border-bottom: 1px solid red;
+}
+
+.casinoTable br {
+  display: none;
+}
+
+.fusion-table table {
+  font-size: 16px;
+}
+
+.fusion-table table th {
+  background: var(--principalColor);
+  background: -webkit-gradient(linear, left top, right top, from(#1f3460), color-stop(35%, #1f3460), to(#4974ce));
+  background: linear-gradient(90deg, #1f3460 0%, #1f3460 35%, #4974ce 100%);
+  color: white;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.fusion-table table td {
+  padding: 10px 20px;
+}
+
+.fusion-table tr:nth-child(2n),
+.fusion-table tr:nth-child(2n) {
+  background-color: #f0d4d4;
+}
+
+.has-drop-cap::first-letter {
+  font-size: 200%;
+  color: var(--principalColor);
+}
+
+.my-alert-box {
+  background: var(--principalColor);
+  color: white;
+  padding-left: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.my-alert-box strong {
+  color: var(--secondColor) !important;
+}
+
+.btnAction {
+  margin: 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnAction a {
+  text-decoration: none;
+  padding: 20px;
+  margin: 5px;
+}
+
+.btnAction:hover a {
+  background-color: var(--secondColor) !important;
+  color: var(--principalColor);
+}
+
+.btnAction--blue a {
+  color: white !important;
+  background-color: var(--principalColor) !important;
+}
+
+.btnAction--blue:hover a {
+  background-color: var(--secondColor) !important;
+  color: var(--principalColor);
+}
+
+/* ----------- Tarjetas Popup ----------- */
+#alert-dialog-description strong,
+#alert-dialog-description h1,
+#alert-dialog-description h2 {
+  color: var(--principalColor);
+}
+
+.tarjetasGroup {
+  width: 100%;
+}
+
+.tarjetasGroup .advgb-tab-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Tarjeta {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border: 2px solid #d6d6d6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2px;
+  max-width: 25%;
+  margin-bottom: 30px;
+}
+
+.Tarjeta .infoPopup {
+  padding: 0px 10px;
+}
+
+.Tarjeta .infoPopup table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.Tarjeta .infoPopup td {
+  padding-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.Tarjeta .infoPopup tr:first-child {
+  color: white;
+}
+
+.Tarjeta .infoPopup tr:first-child td {
+  background-color: #f7e40e;
+  text-align: center;
+  padding: 2px;
+  padding-left: 2px;
+  margin: 10px 20px;
+  margin-right: 20px;
+  color: #1f335f;
+  font-size: 14px;
+  position: relative;
+}
+
+.Tarjeta .infoPopup tr:last-child {
+  visibility: collapse;
+}
+
+.Tarjeta .infoPopup tr:nth-child(2n) {
+  background: var(--principalColor);
+  color: white;
+}
+
+.Tarjeta figure:first-child {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 0px;
+}
+
+.Tarjeta figure img {
+  margin: 20px;
+}
+
+.table-col-2 .wp-block-group__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.casinoTable td {
+  vertical-align: baseline;
+}
+
+.casinoTable a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.casinoTable a:before {
+  font-size: 14px;
+  color: red;
+  margin-right: 10px;
+  content: '\2022 ';
+}
+
+.casinoTable tr:nth-child(2n) {
+  color: black !important;
+  background-color: #f7f2f26e !important;
+}
+
+.casinoTable tr:first-child td {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.smallTable td {
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.smallTable p {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.casinotablebj td {
+  text-align: center;
+}
+
+.casinotablebj tr:nth-child(2n) {
+  color: black !important;
+  background-color: #f0d4d4 !important;
+}
+
+.table-cupon {
+  max-width: 100%;
+}
+
+.table-cupon td {
+  text-align: center;
+}
+
+.table-cupon tr:nth-child(2n) {
+  color: black !important;
+  background-color: #f0d4d4 !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .Tarjeta {
+    max-width: 45%;
+  }
+  .table-cupon {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-device-width: 779px) {
+  .Tarjeta {
+    max-width: 100%;
+  }
+}
+
+/* ----------- Tables ----------- */
+.wp-block-table table thead {
+  background-color: var(--principalColor);
+  color: white;
+}
+
+.wp-block-table table tr:nth-child(2n) {
+  background: #f7f2f26e;
+  color: white;
+}
+
+.wp-block-table table tr td {
+  color: black;
+  margin: 0px;
+  border: 1px solid #f7f2f26e;
+  border-top-color: #f7f2f26e;
+  border-right-color: #f7f2f26e;
+  border-bottom-color: #f7f2f26e;
+  border-left-color: #f7f2f26e;
+  padding: 10px 20px;
+}
+/*# sourceMappingURL=utilities.css.map */

@@ -1,0 +1,290 @@
+@import './colors';
+$smallPhone: 360px;
+$ipad: 768px;
+$laptop: 1024px;
+
+
+.casinoTable {
+  a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid #80808045;
+
+    &:hover{
+      border-bottom: 1px solid red;
+    }
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.fusion-table {
+
+  table {
+    font-size: 16px;
+  }
+ 
+
+  table th {
+    background: var(--principalColor);
+    background: linear-gradient(
+      90deg,
+      rgba(31, 52, 96, 1) 0%,
+      rgba(31, 52, 96, 1) 35%,
+      rgba(73, 116, 206, 1) 100%
+    );
+    color: white;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  table td {
+    padding: 10px 20px;
+  }
+}
+
+.fusion-table tr:nth-child(2n),
+.fusion-table tr:nth-child(2n) {
+  background-color: rgb(240, 212, 212);
+}
+
+.has-drop-cap::first-letter {
+  font-size: 200%;
+  color: var(--principalColor);
+}
+
+.my-alert-box {
+  background: var(--principalColor);
+  color: white;
+  padding-left: 20px;
+  margin-top: 20px;
+  padding: 20px;
+
+  strong {
+    color: var(--secondColor) !important;
+  }
+}
+
+.btnAction {
+  margin: 5px 0px;
+  display: flex;
+  a {
+    text-decoration: none;
+
+    padding: 20px;
+    margin: 5px;
+  }
+  &:hover {
+    a {
+      background-color: var(--secondColor) !important;
+      color: var(--principalColor);
+    }
+  }
+}
+.btnAction--blue {
+  a {
+    color: white !important;
+    background-color: var(--principalColor) !important;
+  }
+  &:hover {
+    a {
+      background-color: var(--secondColor) !important;
+      color: var(--principalColor);
+    }
+  }
+}
+
+/* ----------- Tarjetas Popup ----------- */
+#alert-dialog-description strong,
+#alert-dialog-description h1,
+#alert-dialog-description h2 {
+  color: var(--principalColor);
+}
+
+.tarjetasGroup {
+  width: 100%;
+}
+.tarjetasGroup .advgb-tab-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Tarjeta {
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  border: 2px solid #d6d6d6;
+  flex-direction: column;
+  margin: 2px;
+  max-width: 25%;
+  margin-bottom: 30px;
+
+  .infoPopup {
+    padding: 0px 10px;
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    td {
+      padding-left: 10px !important;
+      margin-right: 10px !important;
+    }
+    tr:first-child {
+      color: white;
+      td {
+        background-color: #f7e40e;
+        text-align: center;
+        padding: 2px;
+        padding-left: 2px;
+        margin: 10px 20px;
+        margin-right: 20px;
+        color: #1f335f;
+        font-size: 14px;
+        position: relative;
+      }
+    }
+
+    tr:last-child {
+      visibility: collapse;
+    }
+
+    tr:nth-child(2n) {
+      background: var(--principalColor);
+      color: white;
+    }
+  }
+
+  figure:first-child {
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    margin: 0px;
+  }
+  figure img {
+    margin: 20px;
+  }
+}
+
+.table-col-2{
+  .wp-block-group__inner-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+  }
+}
+
+.casinoTable{
+  td{vertical-align: baseline;}
+  a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    &:before {
+      font-size: 14px;
+    color: red;
+    margin-right: 10px;
+    content: '\2022 ';
+    }
+  }
+  tr:nth-child(2n) {
+    color: black!important;
+      background-color: #f7f2f26e!important;
+    }
+
+  tr:first-child{
+    td{
+      background-color: #f5f5f5;
+    padding: 20px;
+
+    }
+  }
+}
+.smallTable{
+  
+  td {
+      padding: 0px;
+      margin: 0px;
+      padding-left: 10px;
+  }
+  p{
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
+.casinotablebj{
+    td{
+      text-align: center;
+    }
+  tr:nth-child(2n) {
+    color: black!important;
+      background-color: rgb(240, 212, 212)!important;
+    }
+}
+
+.table-cupon{
+  max-width: 100%;
+  td{
+    text-align: center;
+  }
+tr:nth-child(2n) {
+  color: black!important;
+    background-color: rgb(240, 212, 212)!important;
+  }
+}
+
+
+
+
+
+
+@media only screen and (min-width: $ipad) {
+  .Tarjeta {
+    max-width: 45%;
+  }
+  .table-cupon{
+    max-width: 40%;
+  }
+
+}
+@media only screen and (max-device-width: 779px) {
+  .Tarjeta {
+    max-width: 100%;
+  }
+}
+
+/* ----------- Tables ----------- */
+.wp-block-table {
+  table {
+    thead {
+      background-color: var(--principalColor);
+      color: white;
+    }
+    tr:nth-child(2n) {
+      background: #f7f2f26e;
+      color: white;
+    }
+
+    tr td {
+      color: black;
+      margin: 0px;
+      border: 1px solid #f7f2f26e;
+      border-top-color: #f7f2f26e;
+      border-right-color: #f7f2f26e;
+      border-bottom-color: #f7f2f26e;
+      border-left-color: #f7f2f26e;
+      padding: 10px 20px;
+    }
+  }
+}

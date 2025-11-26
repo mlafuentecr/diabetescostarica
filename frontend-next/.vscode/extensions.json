@@ -1,0 +1,51 @@
+{
+  "recommendations": [
+    // PHP Development
+    "bmewburn.vscode-intelephense-client",     // PHP IntelliSense and advanced features
+    "shufo.vscode-blade-formatter",            // Blade template formatting
+    "junstyle.php-cs-fixer",                   // PHP code formatting
+    "amirmarmul.laravel-blade-vscode",         // Enhanced Blade support
+    "onecentlin.laravel-extension-pack",        // Complete Laravel development pack
+
+    // JavaScript/TypeScript
+    "dbaeumer.vscode-eslint",                  // ESLint for JS/TS
+    "esbenp.prettier-vscode",                  // Code formatting
+    "christian-kohler.npm-intellisense",       // NPM dependencies autocompletion
+
+    // HTML/CSS
+    "formulahendry.auto-rename-tag",           // Auto-rename HTML tags
+    "formulahendry.auto-close-tag",            // Auto-close HTML tags
+    "bradlc.vscode-tailwindcss",               // Tailwind CSS support
+    "stylelint.vscode-stylelint",              // CSS/SCSS linting
+    "mrmlnc.vscode-scss",                      // SCSS IntelliSense
+
+    // Git Integration
+    "eamodio.gitlens",                         // Enhanced Git features
+    "mhutchie.git-graph",                      // Git history visualization
+
+    // Code Quality
+    "editorconfig.editorconfig",               // EditorConfig support
+    "streetsidesoftware.code-spell-checker",   // Spell checking
+    "naumovs.color-highlight",                 // Color highlighting
+    "wayou.vscode-todo-highlight",             // TODO highlighting
+    "aaron-bond.better-comments",              // Enhanced comments
+
+    // Themes and UI
+    "vscode-icons-team.vscode-icons",          // File icons
+    "wesbos.theme-cobalt2",                    // Cobalt2 theme
+    "pkief.material-icon-theme",               // Alternative icon theme
+
+    // Productivity
+    "yzhang.markdown-all-in-one",             // Markdown support
+    "christian-kohler.path-intellisense",      // Path autocompletion
+    "visualstudioexptteam.vscodeintellicode", // AI-assisted development
+
+    // WordPress Specific
+    "wordpresstoolbox.wordpress-toolbox",      // WordPress snippets
+    "tungvn.wordpress-snippet",                // Additional WP snippets
+
+    // Debug Tools
+    "xdebug.php-debug",                        // PHP debugging
+    "ryannaddy.laravel-artisan"                // Laravel Artisan commands
+  ]
+}

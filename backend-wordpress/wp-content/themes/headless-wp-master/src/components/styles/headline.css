@@ -1,0 +1,71 @@
+/*HEADLINE*/
+.awssld {
+  background-color: var(--principalColor) !important;
+}
+
+.awssld__timer.awssld__timer--animated.awssld__timer--run {
+  --timer-background-color: gray !important;
+}
+
+.awssld__controls {
+  visibility: visible !important;
+}
+
+.awssld__container {
+  height: 100%;
+}
+
+.awssld__content .headline {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.awssld__content .headline .mobile {
+  height: 100%;
+  width: 100%;
+}
+
+.awssld__content .headline .mobile img {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 360px) {
+  .awssld {
+    background: #fff;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .awssld {
+    background: #fff;
+    border-bottom: solid 1px gray;
+  }
+  .awssld__content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .headline .mobile {
+    display: none;
+  }
+  .headline .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-size: cover;
+  }
+  .headline .desktop img {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=headline.css.map */

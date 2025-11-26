@@ -1,0 +1,1191 @@
+@import './reset';
+@import './menus';
+@import './tabs';
+@import './utilities';
+@import './colors';
+$smallPhone: 360px;
+$ipad: 768px;
+$laptop: 1024px;
+
+/*<!--=============== GENERAL STYLES  ===============-->*/
+
+html {
+    font-family: 'Lato', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.contactIcons svg {
+    width: 50px;
+    font-size: 45px;
+    color: #fff;
+    padding: 10px;
+    background-color: #747474;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+#___gatsby {
+    overflow: hidden;
+}
+
+.mobile {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+.hide {
+    display: none !important;
+}
+.tableUse{
+    table{
+        a {
+            color: black;
+            text-decoration: none;
+            & :before {
+                font-size: 14px;
+                color: red;
+                content: '\2022';
+            }
+        }
+    }
+}
+.cardsDeposit {
+    .wp-block-group__inner-container {
+        display: flex;
+        flex-direction: row;
+        background: #f1f1f1;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        background: white;
+        width: 100%;
+        height: 200px;
+        margin: 20px;
+        justify-content: center;
+        align-content: center;
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-bottom: 40px;
+        p {
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        &:hover {
+            background: #fff8c6;
+        }
+    }
+}
+
+.top-link {
+    transition: all 0.25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px!important;
+    margin-right: 40px;
+    border-radius: 50%;
+    padding: 0.25em;
+    width: 50px;
+    height: 50px;
+    background-color: #f47373;
+    color: white;
+    text-decoration: none;
+   
+}
+.table-blue-stripes, .table-blue{
+    border: 1px solid gray;
+    tr:first-child {
+        background-color: #f47373;
+      }
+
+      
+   th {
+    background: var(--principalColor);
+    background: linear-gradient(
+      90deg,
+      rgba(31, 52, 96, 1) 0%,
+      rgba(31, 52, 96, 1) 35%,
+      rgba(73, 116, 206, 1) 100%
+    );
+    color: white;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+   td {
+    padding: 10px 20px;
+  }
+
+
+    }
+.yellow {
+    color: var(--principalColor);
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+}
+
+.loadingSpinner {
+    background: #ffffffdb;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    z-index: 9999;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0px 1.0875rem;
+}
+
+.displayLoading {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    font-size: xxx-large;
+}
+
+
+/* || LANGUAGE*/
+
+.MuiInput-underline::after {
+    border: none !important;
+}
+
+.MuiInput-underline {
+    border: none;
+}
+
+.nav-wrapper .formLan svg {
+    display: none;
+}
+
+.lngWrap {
+    position: absolute;
+    background: #ffffffd4;
+    border: 1px solid #d0d0d0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    flex: 1;
+    width: 200px;
+    line-height: 40px;
+    bottom: 100%;
+    z-index: 99;
+    display: none;
+    overflow: hidden;
+    a {
+        &:hover {
+            background-color: lighten(#c40c00, 50%);
+        }
+    }
+}
+
+.openLng {
+    position: relative;
+    .lngWrap {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        margin-top: 20px;
+        a {
+            flex: 1 1;
+            display: flex;
+            align-items: center;
+            margin: 0px;
+            width: 100%;
+            padding-left: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            position: relative;
+            font-size: var(--menuFontSize);
+        }
+    }
+}
+
+
+/*<!--=============== GENERAL  PAGE ===============-->*/
+
+
+/* || header*/
+
+.header {
+    position: relative;
+    .container {
+        flex: 1;
+        min-width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.logo {
+    max-width: 100%;
+    position: relative;
+    top: 0px;
+    img {
+        padding: 0px!important;
+        margin: 0px!important;
+    }
+}
+
+.login__header {
+    display: none;
+}
+
+#___gatsby {
+    overflow: hidden;
+    min-height: 100vh;
+    #gatsby-focus-wrapper {
+        min-height: 100vh;
+    }
+    .pgindex {
+        height: 100vh;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header {
+        margin: 0px;
+        color: black;
+        min-height: auto;
+        display: flex;
+        position: relative;
+        .index {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+/*<!--=============== INDEX  PAGE ===============-->*/
+
+.pgindex {
+    .gotop {
+        display: none;
+    }
+    // //slider1
+    .awssld {
+        height: 100%;
+        max-height: 300px;
+        background-color: white !important;
+    }
+    .awssld__content {
+        background-color: white !important;
+        .headline{
+            height: 100%;
+            width: 100%;
+        }
+        .desktop{
+            height: 100%!important;
+        }
+    }
+}
+
+
+/*<!--=============== Internal  PAGES ===============-->*/
+
+.bet-builder {
+    h3 {
+        background: #1f335f;
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding: 20px;
+    }
+    img {
+        border: 2px solid #1f335f;
+        margin: 0px auto;
+        text-align: center;
+        display: flex;
+    }
+}
+
+.live-in-play {
+    .wp-block-image {
+        float: left;
+        margin-right: 30px;
+    }
+    .wp-block-separator {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.pginternal {
+    .header {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        max-height: auto;
+        .login__header {
+            display: none;
+        }
+    }
+    .mainContent {
+        margin-top: 20px;
+        main {
+            min-height: 70vh;
+        }
+    }
+}
+
+.advgb-tab {
+    span {
+        z-index: 50;
+    }
+}
+
+.pginternal footer .social {
+    padding: 10px;
+}
+
+
+/* || FOOTER*/
+
+footer {
+    .social {
+        display: flex;
+        max-height: 50%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .lngWrap {
+        position: absolute;
+        background: #ffffff;
+        border: 1px solid #d0d0d0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        flex-direction: row;
+        flex: 1 1;
+        height: auto;
+        width: 200px;
+        line-height: 60px;
+        top: -270px;
+        margin-bottom: 40px;
+        z-index: 99;
+        overflow: hidden;
+        a {
+            min-width: 100%;
+        }
+    }
+    .lng {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg:hover {
+            background-color: transparent;
+        }
+        &:hover {
+            svg {
+                background-color: transparent;
+                color: var(--principalColorHigh);
+                cursor: pointer;
+            }
+            color: var(--principalColorHigh);
+            cursor: pointer;
+        }
+    }
+    .formLan {
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        position: relative;
+        svg {
+            display: flex;
+            flex: 1;
+        }
+    }
+    svg {
+        &:hover {
+            background-color: var(--principalColorHigh);
+            cursor: pointer;
+        }
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        &:hover {
+            color: var(--principalColorHigh);
+            cursor: pointer;
+        }
+    }
+    .contact {
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-end;
+        a {
+            font-size: 1rem;
+            display: flex;
+            &:hover {
+                color: var(--secondColor);
+                cursor: pointer;
+            }
+        }
+        .numbers {
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            a {
+                color: black;
+                &:hover {
+                    color: var(--principalColor)
+                }
+            }
+        }
+        .email {
+            color: black;
+            &:hover {
+                color: var(--principalColor)
+            }
+        }
+        .principal {
+            font-size: 1.8em;
+            font-weight: 800;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: black;
+            &:hover {
+                color: var(--principalColor)
+            }
+            p {
+                padding: 0px;
+                margin: 0px;
+                color: black;
+            }
+        }
+    }
+    .desktop {
+        display: none;
+    }
+    .footerBtns {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e5e5e5;
+        background: linear-gradient(180deg, #d4d4d4 0%, #f3f3f3 50%);
+    }
+}
+
+.copyrighs {
+    background: #f3f3f3;
+    display: flex;
+    flex: 1;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #bbbbbb;
+    font-size: var(--fontSizeRegular);
+    color: #767676;
+    .txtLinks p {
+        margin: 0px;
+    }
+    a {
+        font-size: var(--fontSizeRegular);
+        color: #767676;
+        &:hover {
+            color: var(--principalColor);
+        }
+    }
+    .container {
+        padding-bottom: 10px;
+        padding-top: 5px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        svg {
+            color: var(--gray);
+            margin: 0px 5px;
+        }
+        .txt {
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.terms {
+    position: relative;
+    span {
+        text-decoration: underline;
+    }
+}
+
+.gotop {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    text-decoration: none;
+    color: var(--principalColor);
+    &::before {
+        content: 'Go Top ';
+    }
+}
+
+.footerBtns {
+    svg {
+        width: 50px;
+        font-size: 45px;
+        color: #fff;
+        padding: 10px;
+        background-color: #747474;
+        border-radius: 5px;
+        margin: 0px 10px;
+    }
+}
+
+.accountSocial {
+    flex-direction: column;
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100vw;
+    .social {
+        justify-content: space-evenly;
+        min-width: 100vw;
+        background-color: black;
+        display: flex;
+        flex: 1;
+        align-items: center;
+    }
+}
+
+.openAccount {
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--principalColor);
+    width: 80%;
+    justify-content: center;
+    padding: 10px;
+    margin: 15px 0px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 5px;
+    max-width: 300px;
+    &:hover {
+        background-color: var(--principalColorHigh);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.contactInfo {
+    flex: 1;
+}
+
+
+/*<!--===============LOGIN 3 parts login headerloging mainlogin===============-->*/
+
+//0 LOGING  general
+.login {
+    flex-direction: row;
+    padding: 0px 10px 0px 10px;
+    flex: 1;
+    display: flex;
+    #loginForm {
+        display: flex;
+        flex: 1 0 100%;
+        flex-wrap: wrap;
+        min-width: 100%;
+        align-content: center;
+    }
+    input {
+        border-radius: 12px;
+        padding: 10px;
+        background-color: #f3f3f3 !important;
+        width: 100%;
+        color: #1f335f;
+        border: 1px solid #e7e7e7;
+    }
+    #rememberme {
+        width: 15px;
+        height: auto;
+        margin-right: 3px;
+    }
+    .form-group {
+        padding: 4px;
+        flex: 1;
+    }
+    .form-groupFix {
+        font-size: var(--fontSizeRegular);
+        .form-remember {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .box {
+            display: flex;
+        }
+    }
+    .form-group.btnLogin {
+        flex: 1;
+        margin-right: 0px;
+        display: flex;
+        max-width: 20%;
+        #do-login {
+            flex: 1 100%;
+            background-color: white;
+            color: gray;
+            border: 1px solid;
+            border-radius: 12px;
+            &:hover {
+                background-color: lighten(#c40c00, 50%);
+            }
+        }
+    }
+}
+
+#loginForm {
+    .box a:hover {
+        color: var(--principalColorHigh);
+    }
+    .terms:hover {
+        color: var(--principalColorHigh);
+    }
+}
+
+//1 LOGING header seccion
+.login__header {
+    display: none;
+}
+
+//2 LOGING midle seccion
+.mobile.loginbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleSec {
+    .form-groupFix {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .terms {
+        font-size: 12px;
+        height: 10px;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        width: 50%;
+    }
+    #loginForm {
+        margin-bottom: 0px;
+        z-index: 50;
+    }
+    #do-login {
+        height: 40px;
+        font-size: var(--fontSizeRegular);
+    }
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        line-height: var(--fontSizeRegular);
+        display: flex;
+        justify-content: center;
+    }
+    .form-remember .div:nth-child(4) {
+        display: none;
+    }
+    hr {
+        display: flex;
+        width: 100%;
+        padding: 0px;
+        margin: 10px 0px 5px 0px;
+        border: 1px solid var(--principalColor);
+        height: 0px;
+    }
+    .form-groupFix {
+        flex-direction: column;
+        justify-content: space-evenly;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+/*<!--=============== MEDIAQUERY BEGINGS  ===============-->*/
+
+
+/*<!--=============== IOS DEVICES ===============-->*/
+
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    main.mobile.loginbox {
+        display: flex;
+    }
+    .login #loginForm {
+        padding: 10px;
+        height: 20vh;
+    }
+}
+
+@supports not (-webkit-touch-callout: none) {
+    /* CSS for other than iOS devices */
+    main.mobile.loginbox {
+        padding: 10px;
+        display: flex;
+        flex: 1;
+    }
+}
+
+
+/* --------- Desktop  si es amyor que ipad 780px  ------ */
+
+@media only screen and (min-width: $ipad) {
+    .logo {
+        max-width: 300px;
+    }
+    .desktop {
+        display: flex;
+    }
+    .mobile {
+        display: flex;
+    }
+    .login__header {
+        display: flex;
+    }
+   
+    .mainMenu {
+        width: 100%;
+        height: auto;
+        border-top: 1px solid #bbbbbb;
+        border-bottom: 1px solid #bbbbbb;
+       
+    }
+    .cardsDeposit {
+        .box {
+            width: 40%;
+        }
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        .container {
+            flex: 1 1;
+            min-width: initial;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .pgindex {
+        .awssld {
+            min-height: 40%;
+            max-height: initial;
+        }
+    }
+   
+    .lngWrap {
+        top: 6px;
+        bottom: initial;
+        background-color: white;
+        display: none;
+        list-style: none;
+        margin: 0px;
+        width: 250px;
+        div {
+            min-width: 100%;
+            flex: 1 1;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            position: relative;
+            font-size: 0.8rem;
+            padding: 10px 0px;
+            padding-left: 10px;
+        }
+        div:hover{
+            background-color: #fac7c7;
+        }
+    }
+    .formLan {
+        .MuiInputBase-root {
+            padding: 0px;
+            margin: 0px;
+        }
+        .MuiInput-underline::before {
+            border-bottom: none !important;
+        }
+    }
+    .pginternal {
+        .contact {
+            display: none;
+        }
+        .header {
+            .login__header {
+                display: flex;
+            }
+            .mainMenu {
+                position: initial !important;
+            }
+        }
+    }
+    .bet-builder h3 {
+        background: #1f335f;
+        display: flex;
+        color: white;
+        justify-content: center;
+        padding: 20px;
+    }
+    //1 LOGING top header seccion
+    .login__header {
+        max-width: 55%;
+        padding: 0px;
+        line-height: 10px;
+        display: flex;
+        hr {
+            display: none;
+        }
+        .terms {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .form-remember .div:nth-child(4) {
+            display: none;
+        }
+        #loginForm {
+            display: flex;
+            flex: 1 0 100%;
+            flex-wrap: wrap;
+            min-width: 100%;
+            padding: 0px;
+            margin: 0px;
+            height: auto;
+        }
+        .form-groupFix {
+            display: flex;
+            flex-direction: row;
+            font-size: var(--fontSizeRegular);
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            br {
+                display: none;
+            }
+            p {
+                font-size: var(--fontSizeRegular);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0px;
+            }
+            .div {
+                height: 30px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        a {
+            margin-left: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .box {
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex: 1;
+        }
+        .form-remember {
+            flex: 1;
+            min-width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+
+
+    footer {
+        padding: 5px;
+        font-size: 12px;
+        .footerBtns {
+            height: 75%;
+            background-color: transparent;
+            background: transparent;
+        }
+        .desktop {
+            display: flex;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+        .contact {
+            line-height: normal;
+            .numbers {
+                display: flex;
+            }
+            .numbers a:nth-child(2) {
+                margin-left: 5px;
+            }
+            .numbers a:nth-child(2):before {
+                content: ' ';
+            }
+        }
+        .container {
+            flex-direction: row;
+            .accountSocial {
+                flex-direction: row;
+                background: none;
+                min-width: initial;
+                flex: 1 1 50%;
+                padding: 0px 10px;
+                justify-content: center;
+                align-items: center;
+                .social {
+                    max-height: initial;
+                    min-width: initial;
+                    justify-content: flex-end;
+                    background-color: transparent;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+    .mobile {
+        display: none !important;
+    }
+    .header {
+        .login {
+            display: flex;
+            height: 100px;
+            flex: 2;
+        }
+    }
+    .pginternal {
+        .header {
+            margin-bottom: 10vh;
+        }
+    }
+
+    .copyrighs{
+        .container{
+            flex-direction: row;
+        }
+    }
+}
+
+
+/* ----------- laptops si es mas grande que ipad pero heigh ----------- */
+
+@media only screen and (min-width: $ipad) and (max-height: 970px) {
+    .copyrighs {
+        .container {
+            flex-direction: row;
+        }
+    }
+    .headline {
+        height: 100%;
+        width: 100%;
+        div {
+            height: 100% !important;
+        }
+        .desktop img {
+            height: 100% !important;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+
+/* ----------- Desktop  is bigger than 930px ----------- */
+
+@media only screen and (min-width: 930px) {
+    .form-remember .div:nth-child(4) {
+        display: flex !important;
+    }
+}
+
+//small correction
+@media screen and (min-width: $ipad) and (max-width: 1200px) {
+    .terms {
+        height: 22px;
+    }
+    .form-remember {
+        height: 20px;
+    }
+}
+
+
+/* ----------- iPad in landscape ----------- */
+
+// @media only screen and (max-width: 778px) {
+@media only screen and (max-device-width: $ipad) and (orientation: landscape) {
+    .pgindex {
+        flex-wrap: wrap;
+        flex-direction: row !important;
+    }
+    .header {
+        max-height: auto;
+        //  max-height: 15vh;
+        min-width: 100%;
+    }
+    .mainMenu {
+        box-shadow: none;
+    }
+    //2
+    .awssld {
+        max-width: 50% !important;
+    }
+    main.mobile.loginbox {
+        max-width: 50%;
+        //  max-height: 50%;
+    }
+    .openAccount {
+        padding: 5px !important;
+        margin: 5px 0 !important;
+    }
+    footer {
+        color: #fff;
+        width: 100%;
+    }
+}
+
+
+/* ----------- smaller than 360px ----------- */
+
+@media only screen and (min-device-width: 360px) {
+
+    /*<!--=============== IOS DEVICES ===============-->*/
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
+        main.mobile.loginbox {
+            flex: initial;
+        }
+    }
+    /*<!--=============== NOT IOS DEVICES ===============-->*/
+    @supports not (-webkit-touch-callout: none) {
+        /* CSS for other than iOS devices */
+        main.mobile.loginbox {
+            flex: 1;
+        }
+    }
+}
+
+//When keyboard is present hide slideshow
+@media screen and (max-width: $ipad) and (max-height: 450px) {
+    .pgindex {
+        .awssld {
+            display: none;
+        }
+        .loginbox {
+            max-width: 100% !important;
+        }
+    }
+    .drawOpen .mainMenu {
+        top: 10vh;
+    }
+}
+
+//When pho is to small
+@media screen and (max-width: 414px) and (max-height: 670px) {
+    .header {
+        height: 10vh;
+        .container {
+            padding: 0px;
+            .logo {
+                height: 100%;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .openAccount {
+        max-height: 30px;
+        margin: 5px 0px;
+    }
+}

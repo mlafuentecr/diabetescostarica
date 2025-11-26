@@ -1,0 +1,172 @@
+{
+  // Editor Settings
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.renderWhitespace": "boundary",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.minimap.enabled": false,
+
+  // Terminal Settings
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+
+  // Blade Formatter
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "editor.formatOnSave": true
+  },
+
+  // PHP Intelephense Settings
+  "intelephense.files.associations": ["*.php", "*.blade.php"],
+  "intelephense.environment.phpVersion": "8.1",
+  "intelephense.completion.triggerParameterHints": true,
+  "intelephense.completion.insertUseDeclaration": true,
+
+  // WordPress Configuration
+  "files.associations": {
+    "*.php": "php",
+    "*.blade.php": "blade",
+    "wp-config.php": "php",
+    "*.css": "css",
+    "*.js": "javascript",
+    "*.scss": "scss",
+    "*.json": "jsonc"
+  },
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "html": "html",
+    "javascript": "javascriptreact",
+    "php": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // Prettier Configuration
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "es5",
+
+  // ESLint Configuration
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true
+  },
+
+  // Language Specific Formatters
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "amirmarmul.laravel-blade-vscode"
+  },
+
+  // Git Settings
+  "git.ignoreLimitWarning": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+
+  // 🔥 Workbench Settings (ROOM FOR THEME COLORS + YOUR BLUE TITLEBAR)
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Default Dark Modern",
+
+  "workbench.colorCustomizations": {
+    // === Your custom dark earth palette ===
+    "editor.background": "#252220",
+    "sideBar.background": "#2A2723",
+    "activityBar.background": "#252220",
+    "editor.foreground": "#D4C5B9",
+    "editorLineNumber.foreground": "#707070",
+    "editorLineNumber.activeForeground": "#BDBDBD",
+    "editor.selectionBackground": "#564D43",
+    "editor.lineHighlightBackground": "#403B33",
+    "statusBar.background": "#252220",
+    "statusBar.foreground": "#D4C5B9",
+    "panel.background": "#2A2723",
+    "terminal.foreground": "#D4C5B9",
+    "editorCursor.foreground": "#D4C5B9",
+    "editorWidget.background": "#2A2723",
+    "editorWidget.foreground": "#D4C5B9",
+    "sideBar.foreground": "#D4C5B9",
+    "activityBar.foreground": "#D4C5B9",
+    "list.activeSelectionForeground": "#D4C5B9",
+    "list.inactiveSelectionForeground": "#D4C5B9",
+    "tab.activeForeground": "#D4C5B9",
+    "tab.inactiveForeground": "#A39B92",
+
+    // === 🔵 Your blue title bar (frontend?) ===
+    "titleBar.activeBackground": "#005BBB",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveBackground": "#004C99",
+    "titleBar.inactiveForeground": "#cccccc"
+  },
+
+  // HTML and Live Sass Compiler
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapAttributes": "auto",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/css"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": true,
+
+  // Blade Formatter
+  "bladeFormatter.format.sortTailwindcssClasses": true,
+  "bladeFormatter.format.wrapAttributes": "auto",
+
+  // PHP Settings
+  "php.validate.enable": true,
+  "php.suggest.basic": false,
+
+  // Misc
+  "explorer.confirmDelete": false,
+  "auto-rename-tag.activationOnLanguage": ["*"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/vendor": true
+  }
+}
