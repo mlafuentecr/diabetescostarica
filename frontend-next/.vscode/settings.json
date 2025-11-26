@@ -112,7 +112,7 @@
     "sideBar.background": "#2A2723",
     "activityBar.background": "#252220",
     "editor.foreground": "#D4C5B9",
-    "titleBar.activeBackground": "#BB0000",
+    "titleBar.activeBackground": "#258b1b",
     "titleBar.activeForeground": "#ffffff",
     "titleBar.inactiveBackground": "#990000",
     "titleBar.inactiveForeground": "#cccccc",

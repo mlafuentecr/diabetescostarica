@@ -3,7 +3,7 @@
   "editor.fontSize": 16,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 120,
+  "editor.wordWrapColumn": 120, // Reduced for better readability
   "editor.renderWhitespace": "boundary",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
@@ -18,10 +18,11 @@
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit"
   },
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": false, // Added for cleaner interface
 
   // Terminal Settings
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorBlinking": true,
 
@@ -45,13 +46,13 @@
     "*.css": "css",
     "*.js": "javascript",
     "*.scss": "scss",
-    "*.json": "jsonc"
+    "*.json": "jsonc" // Added for better JSON editing
   },
   "emmet.includeLanguages": {
     "blade": "html",
     "html": "html",
     "javascript": "javascriptreact",
-    "php": "html"
+    "php": "html" // Added for PHP files
   },
   "emmet.triggerExpansionOnTab": true,
 
@@ -64,13 +65,14 @@
   "prettier.jsxSingleQuote": true,
   "prettier.trailingComma": "es5",
 
-  // ESLint Configuration
-  "eslint.format.enable": true,
-  "eslint.run": "onSave",
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  // ESlint Configuration
   "eslint.codeAction.disableRuleComment": {
     "enable": true
   },
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.workingDirectories": ["./src"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   // Language Specific Formatters
   "[javascript]": {
@@ -96,22 +98,24 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "amirmarmul.laravel-blade-vscode"
   },
-
   // Git Settings
   "git.ignoreLimitWarning": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
 
-  // 🔥 Workbench Settings (ROOM FOR THEME COLORS + YOUR BLUE TITLEBAR)
+  // Workbench Settings
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Default Dark Modern",
-
+  "workbench.startupEditor": "newUntitledFile",
   "workbench.colorCustomizations": {
-    // === Your custom dark earth palette ===
     "editor.background": "#252220",
     "sideBar.background": "#2A2723",
     "activityBar.background": "#252220",
     "editor.foreground": "#D4C5B9",
+    "titleBar.activeBackground": "#BB0000",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveBackground": "#990000",
+    "titleBar.inactiveForeground": "#cccccc",
     "editorLineNumber.foreground": "#707070",
     "editorLineNumber.activeForeground": "#BDBDBD",
     "editor.selectionBackground": "#564D43",
@@ -128,13 +132,21 @@
     "list.activeSelectionForeground": "#D4C5B9",
     "list.inactiveSelectionForeground": "#D4C5B9",
     "tab.activeForeground": "#D4C5B9",
-    "tab.inactiveForeground": "#A39B92",
+    "tab.inactiveForeground": "#A39B92"
+  },
 
-    // === 🔵 Your blue title bar (frontend?) ===
-    "titleBar.activeBackground": "#005BBB",
-    "titleBar.activeForeground": "#ffffff",
-    "titleBar.inactiveBackground": "#004C99",
-    "titleBar.inactiveForeground": "#cccccc"
+  // Token Colors
+  "editor.tokenColorCustomizations": {
+    "[Default Dark Modern]": {
+      "textMateRules": [
+        {
+          "scope": ["support.type.property-name"],
+          "settings": {
+            "foreground": "#8b7f74"
+          }
+        }
+      ]
+    }
   },
 
   // HTML and Live Sass Compiler
@@ -149,7 +161,7 @@
   ],
   "liveSassCompile.settings.autoprefix": true,
 
-  // Blade Formatter
+  // Blade Formatter Extension
   "bladeFormatter.format.sortTailwindcssClasses": true,
   "bladeFormatter.format.wrapAttributes": "auto",
 
@@ -157,7 +169,7 @@
   "php.validate.enable": true,
   "php.suggest.basic": false,
 
-  // Misc
+  // Miscellaneous Settings
   "explorer.confirmDelete": false,
   "auto-rename-tag.activationOnLanguage": ["*"],
   "diffEditor.ignoreTrimWhitespace": false,
