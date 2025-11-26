@@ -16,6 +16,21 @@ import Header from './header'
 import Footer from './footer'
 import SliderIndex from '../components/SliderIndex'
 
+const LoadingOverlay = ({ loading }) => {
+  if (!loading) {
+    return null
+  }
+
+  return (
+    <div className={'loadingSpinner'}>
+      <div className="loading">
+        <CircularProgress />
+        Loading..
+      </div>
+    </div>
+  )
+}
+
 const LayoutIndex = props => {
   const queryGlobal = useStaticQuery(graphql`
   {
@@ -186,28 +201,13 @@ const LayoutIndex = props => {
     }
   })
 
-  const Loading = () => {
-    
-    if (loading) {
-      return (
-        <div className={'loadingSpinner'}>
-          <div className="loading">
-            <CircularProgress  />
-            Loading..
-          </div>
-        </div>
-      )
-    }
-    return false
-  }
+   function loadingAction() {
+     setLoading(true)
+   }
 
-  function loadingAction() {
-    setLoading(true)
-  }
-
-  return (
-    <GlobalProvider>
-      <Loading />
+   return (
+     <GlobalProvider>
+       <LoadingOverlay loading={loading} />
   
       <SEO title={'index'} />
       <div

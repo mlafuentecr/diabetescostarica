@@ -1,20 +1,19 @@
-import React, { useContext,  useState, useEffect} from 'react'
+import React, { useContext, useState } from "react"
 import {  FaGlobe } from 'react-icons/fa';
 import { GlobalContext }  from "../components/context/globalContext"
 
 const LanguageForm =(props)=> {
   const [lngOpen, setLngOpen] = useState(false);
   const {state, setLenguage} = useContext(GlobalContext);
-  const [lngTxt, setlngTxt] = useState('LANGUAGE');
- 
+
 
   //LENGUAGE
   const handleInpLenguageChange = () => {
       //Si change de lng y no estoy en index redirect window.location.href = '/'
       if(window.location.pathname !== `/`){
-        window.location.href = `/`
+        window.location.assign(`/`)
       }
-  
+
   }
 
  
@@ -25,35 +24,26 @@ const LanguageForm =(props)=> {
   if(state.lenguage === 'zh'){return '語言'}
  }
 
-  const FormLenguage =()=>{
+  const wrapperClass = props.actionType === 'click'
+    ? `formLan ${lngOpen ? "openLng" : ""}`
+    : "formLan openLng autoHide"
+
+  const toggleOpen = props.actionType === 'click' ? () => setLngOpen(!lngOpen) : undefined
+
+  return (
+    <div className={wrapperClass}>
+      <div className="lng" role="button" onClick={toggleOpen}>
+        <FaGlobe /> {langTitle()}
+      </div>
+      <div className={'lngWrap'}>
+        <div role="button" onClick={()=>{setLenguage('en'); setLngOpen(false); handleInpLenguageChange()}} >English</div>
+        <div role="button" onClick={()=>{setLenguage('vi'); setLngOpen(false); handleInpLenguageChange()}} >Tiếng Việt</div>
+        <div role="button" onClick={()=>{setLenguage('zh'); setLngOpen(false); handleInpLenguageChange()}} >中文</div>
+      </div>
+    </div>
+  )
 
 
-      if(props.actionType === 'click'){
-      return <div className={`formLan ${lngOpen ? "openLng" : ""}`}>
-              <div className="lng" role = "button" onClick={()=>setLngOpen(!lngOpen)}> <FaGlobe  /> {langTitle()} </div>
-                <div className={'lngWrap'}>
-                  <div  role = "button" onClick={()=>{setLenguage('en'); setLngOpen(false); handleInpLenguageChange()}} >English</div>
-                  <div  role = "button" onClick={()=>{setLenguage('vi'); setLngOpen(false); handleInpLenguageChange()}} >Tiếng Việt</div>
-                  <div  role = "button" onClick={()=>{setLenguage('zh'); setLngOpen(false); handleInpLenguageChange()}} >中文</div>
-                </div>
-            </div>
-      }else{
-        return <div className={`formLan openLng autoHide`}>
-              <div className="lng" role = "button" > <FaGlobe  /> {langTitle()}</div>
-                <div className={'lngWrap'}>
-                <div  role = "button" onClick={()=>{setLenguage('en'); setLngOpen(false); handleInpLenguageChange()}} >English</div>
-                  <div  role = "button" onClick={()=>{setLenguage('vi'); setLngOpen(false); handleInpLenguageChange()}} >Tiếng Việt</div>
-                  <div  role = "button" onClick={()=>{setLenguage('zh'); setLngOpen(false); handleInpLenguageChange()}} >中文</div>
-                </div>
-            </div>
-      }
-    }
-
-    
-
-    return <FormLenguage className="lng"/>
-    
- 
 }
 
 

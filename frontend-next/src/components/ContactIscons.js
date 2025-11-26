@@ -1,26 +1,17 @@
-import React, { useEffect } from 'react'
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from 'react-icons/fa';
+import React, { useState } from "react"
+import { MdEmail } from "react-icons/md"
+import { FaPhone } from "react-icons/fa"
 
+const ContactIscons = () => {
+  const [phone] = useState(() => (typeof window !== "undefined" ? localStorage.getItem("phone") || "" : ""))
+  const [email] = useState(() => (typeof window !== "undefined" ? localStorage.getItem("email") || "" : ""))
 
-
-  const ContactIscons = (props) => {
-    let phone  = ''
-    let email = ''
-
-  useEffect(() => {
-     phone = localStorage.getItem("phone");
-     email = localStorage.getItem("email");
-     console.log(`email ${email}`);
-  });
-
-    return (
-      <div class="contactIcons">
-         <MdEmail onClick={() => { document.location.href=`mailto:${email}`; }} />
-         <FaPhone  onClick={() => { document.location.href="tel:"+phone; }} />
-      </div>
-    )
-
+  return (
+    <div className="contactIcons">
+      <MdEmail onClick={() => { document.location.href = `mailto:${email}` }} />
+      <FaPhone onClick={() => { document.location.href = `tel:${phone}` }} />
+    </div>
+  )
 }
 
-export default  ContactIscons;
+export default ContactIscons
