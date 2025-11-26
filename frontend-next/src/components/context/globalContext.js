@@ -8,8 +8,15 @@ export const GlobalContext  = createContext();
 export const GlobalProvider = props =>{
 
         //Declaro los States
-        const [userId, setUserId] = useState('');
-        const [lenguage, setLenguage] = useState('en');
+         const [userId, setUserId] = useState('');
+         const [lenguage, setLenguage] = useState(() => {
+           if (typeof window !== "undefined") {
+             const stored = localStorage.getItem("lenguage")
+             if (stored) return stored
+           }
+
+           return "en"
+         });
         //const [login, setLogin] = useState(false);
 
         // //
@@ -19,17 +26,10 @@ export const GlobalProvider = props =>{
           userId: userId
         }
 
-        //cuando cargo pagina
-        useEffect(() => {
-          const lng = localStorage.getItem("lenguage");
-          console.log(`getting lenguage from storage----------------------${lng}`)
-          if(lng !== '' && lng !== null){setLenguage(lng)}
-        }, []);
-        
-        useEffect(() => {
-          localStorage.setItem("lenguage", state.lenguage);
-          console.log(`******** localStorage lenguageSelected *********${state.lenguage}`)
-        }, [lenguage]);
+         useEffect(() => {
+           localStorage.setItem("lenguage", state.lenguage);
+           console.log(`******** localStorage lenguageSelected *********${state.lenguage}`)
+         }, [lenguage]);
 
 
 

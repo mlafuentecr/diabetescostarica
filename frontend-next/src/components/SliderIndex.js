@@ -5,6 +5,7 @@ import { GlobalContext }  from "../components/context/globalContext"
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
+const AutoplaySlider = withAutoplay(AwesomeSlider)
 
 const SliderIndex = (props) => {
 
@@ -192,29 +193,25 @@ switch (state.lenguage) {
 });
 
 
-  //creo un nuevo array sin banner que no esten enable
-  const bannerArray = headlineItemTest.filter(Boolean);
- 
+   //creo un nuevo array sin banner que no esten enable
+   const bannerArray = headlineItemTest.filter(Boolean);
 
-  const AutoplaySlider = withAutoplay(AwesomeSlider);
+   return (
+     <AutoplaySlider
+       // animation="cubeAnimation"
+       animation="foldOutAnimation"
+       className="ASlider"
+       bullets={false}
+       fillParent={false}
+       organicArrows
+       startup
+       play
+       cancelOnInteraction={false} // should stop playing on user interaction
+       interval={56000}
+     >
+       {bannerArray}
+     </AutoplaySlider>
+   );
+  }
 
-  const Slider = (
-    <AutoplaySlider
-      // animation="cubeAnimation"
-      animation="foldOutAnimation"
-      className="ASlider"
-      bullets={false}
-      fillParent={false}
-      organicArrows={true}
-      startup={true}
-      play={true}
-      cancelOnInteraction={false} // should stop playing on user interaction
-      interval={56000}>
-      {bannerArray}
-    </AutoplaySlider>
-  );
-
-  return Slider;
-}
-
-export default SliderIndex
+  export default SliderIndex
