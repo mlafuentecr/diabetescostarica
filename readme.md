@@ -27,6 +27,9 @@ Headless WordPress backend + Next.js frontend in a single repo.
 7) Install/enable any needed plugins (ACF, WPGraphQL, CORS headers, etc.) and expose content through REST (or GraphQL if you add it).
 
 API base (for reference): `http(s)://<your-wp-host>/wp-json/`
+https://local.diabetescostarica.com/diabetescostarica/backend-wordpress/?rest_route=/wp/v2/posts
+
+
 
 ### Frontend (Next.js)
 ```bash
